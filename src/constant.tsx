@@ -1,3 +1,5 @@
+
+
 export const navLinks = [
 	{
 		title: 'About',
@@ -27,3 +29,81 @@ export const heroSectionData = {
 	description:
 		'Building responsive web apps with React & Next.js, exploring backend development.',
 };
+
+export const skills = [
+	{
+		name: 'HTML',
+		logo: 'html5.svg',
+    category: ['frontend']
+	},
+	{
+		name: 'CSS',
+		logo: 'css.svg',
+    category: ['frontend']
+	},
+	{
+		name: 'Javascript',
+		logo: 'js.svg',
+    category: ['frontend', 'backend']
+	},
+	{
+		name: 'Tailwind',
+		logo: 'tailwind.svg',
+    category: ['frontend']
+	},
+	{
+		name: 'React',
+		logo: 'react.svg',
+    category: ['frontend']
+	},
+	{
+		name: 'Next',
+		logo: 'nextjs.svg',
+    category: ['frontend', 'backend']
+	},
+	{
+		name: 'Typescript',
+		logo: 'typescript.svg',
+    category: ['frontend', 'backend']
+	},
+	{
+    name: 'Zustand',
+		logo: 'zustand.webp',
+    category: ['frontend']
+	},
+	{
+		name: 'NextAuth',
+		logo: 'nextauth.webp',
+    category: ['backend']
+	},
+	{
+		name: 'MongoDB',
+		logo: 'mongodb.webp',
+    category: ['backend']
+	},
+	{
+    name: 'Tanstack Query',
+		logo: 'react-query.svg',
+    category: ['frontend']
+	},
+  {
+    name: 'Framer Motion',
+    logo: 'framermotion.webp',
+    category: ['frontend']
+  },
+    {
+    name: 'Git',
+    logo: 'git.svg',
+    category: ['tools']
+  },
+  {
+		name: 'Github',
+		logo: 'github.webp',
+    category: ['tools']
+	},
+  {
+		name: 'Postman',
+		logo: 'postman.svg',
+    category: ['tools']
+	},
+];
