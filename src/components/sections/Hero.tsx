@@ -4,7 +4,7 @@ import { heroSectionData } from '@/constant'
 export default function Hero() {
   return (
     <section className="relative">
-      <div className="wrapper min-h-screen grid place-items-center py-4 relative z-20">
+      <div className=" min-h-screen grid place-items-center py-4 relative z-20">
         <div className="text-center px-4">
           <h1 className="font-bold text-4xl md:text-5xl max-w-3xl mx-auto">
             {heroSectionData.heading}
