@@ -107,3 +107,24 @@ export const skills = [
     category: ['tools']
 	},
 ];
+
+export const projects = [
+	{
+		title: 'Hyrivo',
+		description:
+			'A simple website with Japanese Language Proficiency Test(JLPT) vocabularies from N5 level to N1 level.',
+		techsUsed: ['React', 'Next', 'Tailwind', 'Shadcn-ui', 'Zustand', 'Tanstack-query', 'MongoDB', 'NextAuth', 'Framer Motion'],
+		image: 'projects/hyrivo.png',
+		liveUrl: 'https://hyrivo.vercel.app/',
+		githubUrl: 'https://github.com/sezaru-dev/hyrivo',
+	},
+	{
+		title: 'Hyrivo',
+		description:
+			'A simple website with Japanese Language Proficiency Test(JLPT) vocabularies from N5 level to N1 level.',
+		techsUsed: ['React', 'Next', 'Tailwind', 'Shadcn-ui', 'Zustand', 'Tanstack-query', 'MongoDB', 'NextAuth', 'Framer Motion'],
+		image: 'projects/hyrivo.png',
+		liveUrl: 'https://hyrivo.vercel.app/',
+		githubUrl: 'https://github.com/sezaru-dev/hyrivo',
+	},
+];
