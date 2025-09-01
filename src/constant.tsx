@@ -1,20 +1,20 @@
 
 
 export const navLinks = [
+  {
+    title: 'Skills',
+    cName: 'nav_item',
+    url: '/skills',
+  },
+  {
+    title: 'Projects',
+    cName: 'nav_item',
+    url: '/projects',
+  },
 	{
 		title: 'About',
 		cName: 'nav_item',
 		url: '/about',
-	},
-	{
-		title: 'Skills',
-		cName: 'nav_item',
-		url: '/skills',
-	},
-	{
-		title: 'Projects',
-		cName: 'nav_item',
-		url: '/projects',
 	},
 	{
 		title: 'Contact',
@@ -128,3 +128,8 @@ export const projects = [
 		githubUrl: 'https://github.com/sezaru-dev/hyrivo',
 	},
 ];
+
+export const contact = {
+  heading: 'Get in touch',
+  description: "I’m a Front-end Developer seeking opportunities to contribute to real-world projects and grow my skills. If you’re looking for someone passionate about crafting modern, responsive web applications, feel free to reach out — my inbox is always open.",
+}
