@@ -8,7 +8,7 @@ export default function Projects() {
     <section className='wrapper py-24'>
       <div className='mb-12'>
         <h2 className='text-xl text-neutral-50/60 mb-4'>Projects</h2>
-        <p className='text-3xl lg:text-4xl font-medium max-w-xl'>Here are the projects that I've built.</p>
+        <p className='text-3xl lg:text-4xl font-medium max-w-xl'>Here are the projects that I&apos;ve built.</p>
       </div>
 
       <div className='grid grid-cols-1 gap-6 lg:gap-48 mb-8'>
