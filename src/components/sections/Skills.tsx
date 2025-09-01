@@ -22,7 +22,7 @@ export default function Skills() {
 
       <SkillsTab selected={selectedCategory} onSelect={setSelectedCategory}/>
 
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-4 lg:grid-cols-6 mt-12 max-w-6xl mx-auto'>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-4 lg:grid-cols-6 mt-12 max-w-5xl mx-auto'>
           {filteredSkills.map(skill => (
             <SkillCard key={skill.name} name={skill.name} imgUrl={skill.logo} widthHeight={35}/>
           ))}
