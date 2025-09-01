@@ -1,3 +1,7 @@
+import About from "@/components/sections/About";
+import Contact from "@/components/sections/Contact";
+import Education from "@/components/sections/Education";
+import Footer from "@/components/sections/Footer";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
@@ -11,6 +15,10 @@ export default function Home() {
         <Hero/>
         <Skills/>
         <Projects/>
+        <About/>
+        <Education/>
+        <Contact/>
+        <Footer/>
       </main>
     </div>
   );
