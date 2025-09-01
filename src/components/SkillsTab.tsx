@@ -23,7 +23,7 @@ export default function SkillsTab({ selected, onSelect }: SkillsTabProps) {
           aria-selected={selected === key}
           onClick={() => onSelect(key)}
           className={`focus:outline-none ${
-            selected === key ? 'text-fuchsia-500 font-medium' : 'text-neutral-400 hover:text-fuchsia-400'
+            selected === key ? 'text-purple-500 font-medium' : 'text-neutral-400 hover:text-purple-400'
           }`}
         >
           {label}
