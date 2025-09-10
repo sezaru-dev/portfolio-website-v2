@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from 'next/font/google';
 import "./globals.css";
+import { Providers } from "@/providers/ThemeProvider";
+
 
 export const metadata: Metadata = {
   title: "Cezarlito O. Baguhin",
@@ -18,11 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
         className={`${poppins.className} antialiased`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
