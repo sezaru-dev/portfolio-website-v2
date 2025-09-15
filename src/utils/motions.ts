@@ -13,61 +13,42 @@ export const staggerContainer = (
   },
 });
 
+// parent menu
 export const mobileMenu: Variants = {
-  hidden: {
-    height: 0,
-    opacity: 0.4,
-  },
+  hidden: { height: 0, opacity: 0 },
   show: {
     height: "100vh",
     opacity: 1,
     transition: {
       when: "beforeChildren",
-      duration: 0.6, 
+      staggerChildren: 0.12, // children enter one by one
     },
   },
   exit: {
     opacity: 0,
     height: 0,
     transition: {
-      ease: "easeInOut",
-      duration: 0.3,
-      delay: 1.4,
+      when: "afterChildren", // parent waits until all li have exited
+      staggerChildren: 0.1,
+      staggerDirection: -1, // reverse order
     },
   },
-};
+}
 
-export const mobileMenuLink = (
-  showDelay: number,
-  delay: number,
-  exitDelay: number
-): Variants => ({
-  hidden: {
-    y: 80,
-    opacity: 0,
-    transition: {
-      delay, 
-    },
-  },
+// child links
+export const mobileMenuLink: Variants = {
+  hidden: { y: 40, opacity: 0 },
   show: {
     y: 0,
     opacity: 1,
-    transition: {
-      ease: "easeInOut",
-      duration: 0.3,
-      delay: showDelay,
-    },
+    transition: { duration: 0.35, ease: "easeOut" },
   },
   exit: {
+    y: 20,
     opacity: 0,
-    y: 80,
-    transition: {
-      ease: "easeInOut",
-      duration: 0.3,
-      delay: exitDelay,
-    },
+    transition: { duration: 0.25, ease: "easeInOut" },
   },
-});
+}
 
 export const headerLinksVariants: Variants = {
   hidden: {
@@ -146,31 +127,3 @@ export const fade = (duration: number, delay: number): Variants => ({
     },
   },
 });
-
-
-export const popup = (delay: number = 0, duration: number = 0.3): Variants => ({
-  hidden: {
-    opacity: 0,
-    scale: 0.9,
-    y: 20, // slight push down
-  },
-  show: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: {
-      duration,
-      delay,
-      ease: "easeOut",
-    },
-  },
-  exit: {
-    opacity: 0,
-    scale: 0.9,
-    y: 20,
-    transition: {
-      duration: 0.25,
-      ease: "easeIn",
-    },
-  },
-})
