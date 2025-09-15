@@ -2,8 +2,6 @@
 import Image from "next/image"
 import React from "react"
 import Badge from "../Badge"
-import { FiGithub } from "react-icons/fi"
-import { HiOutlineExternalLink } from "react-icons/hi"
 import { motion } from "framer-motion"
 import { fade } from "@/utils/motions"
 
