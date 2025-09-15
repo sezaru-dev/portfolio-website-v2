@@ -13,15 +13,21 @@ export default function ThemeToggle() {
 
   if (!mounted) return null
 
+  const isDark = theme === "dark";
+
   return (
     <button
+      type="button"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="p-2 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+      className="p-2 rounded-full border border-neutral-300 dark:border-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
+      role="switch"
+      aria-checked={isDark}
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       {theme === "light" ? (
-        <FaMoon className="w-5 h-5" />
+        <FaMoon size={18} />
       ) : (
-        <FaSun className="w-5 h-5" />
+        <FaSun size={18} />
       )}
     </button>
   )
