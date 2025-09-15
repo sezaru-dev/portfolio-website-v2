@@ -1,66 +1,77 @@
-import { contact } from '@/constant'
+'use client'
+
 import React from 'react'
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { ContactSectionText, emailLink } from '@/constant'
+import AnimatedText from '../AnimatedText'
+import { motion } from 'framer-motion'
+import { staggerContainer, fadeIn } from '@/utils/motions'
 
 export default function Contact() {
   return (
-    <section className="wrapper py-24">
+    <motion.section
+      id="contact"
+      className="wrapper py-24"
+      variants={staggerContainer(0.2, 0.1)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
       {/* Heading */}
-      <div className="mb-12 text-center">
-        <h2 className="text-xl text-neutral-50/60 mb-4">Connect</h2>
+      <motion.div
+        variants={fadeIn("up", "tween", 0, 0.6)}
+        className="mb-12 text-center"
+      >
+        <h2 className="text-neutral-50/60 mb-4 tracking-widest uppercase">
+          {ContactSectionText.heading}
+        </h2>
         <p className="text-3xl lg:text-4xl font-medium max-w-xl mx-auto">
-          {contact.heading}
+          {ContactSectionText.subheading.split(" ").map((word, wIndex) => (
+            <span key={wIndex} className="inline-flex mr-[2%]">
+              {word.split("").map((letter, lIndex) => (
+                <AnimatedText key={lIndex}>{letter}</AnimatedText>
+              ))}
+            </span>
+          ))}
         </p>
-      </div>
+      </motion.div>
 
       {/* Description */}
-      <div className="text-center mb-10">
-        <p className="text-xl lg:w-1/2 mx-auto leading-loose font-light">
-          {contact.description}
+      <motion.div
+        variants={fadeIn("up", "tween", 0.1, 0.6)}
+        className="text-center mb-10"
+      >
+        <p className="text-lg md:text-xl lg:w-1/2 mx-auto leading-loose font-light">
+          {ContactSectionText.description}
         </p>
-      </div>
+      </motion.div>
 
-      {/* Social Links */}
-      <div className="flex items-center justify-center gap-6">
+      {/* CTA Button */}
+      <motion.div
+        variants={fadeIn("up", "tween", 0.2, 0.6)}
+        className="mt-12 text-center"
+      >
         <a
-          href="https://github.com/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-fuchsia-500 transition-colors text-2xl"
-          aria-label="GitHub"
+          href={`https://mail.google.com/mail/u/0/?to=${emailLink}&su=&body=&fs=1&tf=cm`}
+          target='_blank'
+          rel="noopener noreferrer" 
+          className="relative
+                px-6 md:px-8 py-3
+                rounded-xl
+                font-medium
+                text-white
+                bg-purple-600
+                hover:bg-purple-700
+                focus:ring-2 focus:ring-purple-400
+                transition-all duration-300
+                before:absolute before:inset-0 before:rounded-xl
+                before:bg-purple-500 before:blur-md before:opacity-20
+                before:transition before:duration-300
+                hover:before:opacity-40
+                before:-z-10"
         >
-          <FaGithub />
+          Let’s Connect
         </a>
-        <a
-          href="https://linkedin.com/in/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-fuchsia-500 transition-colors text-2xl"
-          aria-label="LinkedIn"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href="https://twitter.com/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-fuchsia-500 transition-colors text-2xl"
-          aria-label="Twitter"
-        >
-          <FaTwitter />
-        </a>
-      </div>
-
-      {/* Optional CTA Button */}
-<div className="mt-12 text-center">
-  <a
-    href="mailto:youremail@example.com"
-    className="px-6 py-3 bg-purple-700 rounded-lg text-white font-medium hover:bg-purple-600 transition-colors shadow-md shadow-purple-600/30"
-  >
-    Send me a message
-  </a>
-</div>
-
-    </section>
+      </motion.div>
+    </motion.section>
   )
 }

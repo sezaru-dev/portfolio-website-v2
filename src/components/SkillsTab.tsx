@@ -35,7 +35,7 @@ export default function SkillsTab({ selected, onSelect }: SkillsTabProps) {
             className={`relative pb-1 focus:outline-none transition-colors duration-300 ${
               isActive
                 ? "text-purple-500 font-semibold"
-                : "text-neutral-400 hover:text-purple-400"
+                : "text-foreground hover:text-purple-400"
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

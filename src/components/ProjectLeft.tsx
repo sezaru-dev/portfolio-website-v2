@@ -41,30 +41,29 @@ export default function ProjectLeft({ project }: Project) {
       </motion.a>
 
       {/* Content Section */}
-      <motion.div variants={fade(.4, .7)}
+      <motion.div variants={fade(.4, .3)}
        className="col-start-2 col-end-12 lg:col-start-7 lg:col-end-13 row-start-1 z-10 p-4 bg-neutral-600/10 lg:bg-transparent shadow-md rounded-lg lg:shadow-none lg:rounded-none text-center lg:text-right w-full">
         {/* Heading */}
         <div className="mb-4 md:mb-6">
-          <p className="text-xs text-purple-500 lg:text-sm mb-2">
+          <p className="text-xs font-medium text-foreground/60 mb-2 uppercase tracking-wide">
             Featured Project
           </p>
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="text-xl font-bold"
+          <h3
+            className="text-xl font-bold text-foreground"
           >
             {project.title}
-          </a>
+          </h3>
         </div>
 
         {/* Description */}
-        <p className="text-sm lg:text-base mb-4 lg:bg-neutral-800 lg:shadow-md lg:p-6 rounded-md leading-relaxed">
+        <p className="text-sm lg:text-base mb-6 leading-relaxed
+            bg-neutral-100 dark:bg-neutral-800
+            rounded-md lg:p-6 shadow-md">
           {project.description}
         </p>
 
         {/* Tech Stack */}
-        <ul className="flex items-center justify-center lg:justify-end text-xs sm:text-sm lg:text-base flex-wrap mb-6 gap-2">
+        <ul className="flex items-center justify-center lg:justify-end text-xs sm:text-sm lg:text-base flex-wrap mb-10 gap-2">
           {project.techsUsed.map((technology, index) => (
             <Badge key={index}>{technology}</Badge>
           ))}
@@ -74,22 +73,38 @@ export default function ProjectLeft({ project }: Project) {
         <ul className="flex items-center justify-center lg:justify-end gap-5 text-sm">
           <li>
             <a
-              href={project.githubUrl}
+              href={project.liveUrl}
               target="_blank"
               rel="noreferrer"
-              className="hover:text-primary transition-colors duration-300"
+              className="
+                px-3 py-2 rounded-lg
+                bg-purple-500 hover:bg-purple-600
+                dark:bg-purple-600 dark:hover:bg-purple-700
+                text-white font-medium
+                shadow-md hover:shadow-lg
+                transition-all duration-300
+                flex items-center gap-2
+              "
             >
-              <FiGithub size={22} />
+              <HiOutlineExternalLink/>
+              Live Demo
             </a>
           </li>
           <li>
             <a
-              href={project.liveUrl}
+              href={project.githubUrl}
               target="_blank"
               rel="noreferrer"
-              className="hover:text-primary transition-colors duration-300"
+              className="
+                px-3 py-2 rounded-lg
+                hover:bg-foreground/5
+                text-foreground font-medium
+                transition-all duration-300
+                flex items-center gap-2
+              "
             >
-              <HiOutlineExternalLink size={22} />
+              <FiGithub/>
+              View Code
             </a>
           </li>
         </ul>
