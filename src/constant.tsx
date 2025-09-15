@@ -1,33 +1,52 @@
-
+import { FaFacebookF, FaGithub, FaLinkedinIn, FaTiktok } from "react-icons/fa";
 
 export const navLinks = [
   {
     title: 'Skills',
-    cName: 'nav_item',
-    url: '/skills',
+    id: 'nav_item',
+    url: '#skills',
   },
   {
     title: 'Projects',
-    cName: 'nav_item',
-    url: '/projects',
+    id: 'nav_item',
+    url: '#projects',
   },
 	{
 		title: 'About',
-		cName: 'nav_item',
-		url: '/about',
+		id: 'nav_item',
+		url: '#about',
 	},
 	{
 		title: 'Contact',
-		cName: 'nav_item',
-		url: '/contact',
+		id: 'cta_contact',
+		url: '#contact',
 	},
 ];
 
 export const heroSectionData = {
-	heading: 'Front-end Web Developer | Crafting Modern Experiences',
-	subheading: 'Let me build web stuff for you.',
+	heading: 'Transforming Ideas into Interactive Web Experiences',
 	description:
-		'Building responsive web apps with React & Next.js, exploring backend development.',
+		'Passionate about creating practical and engaging web experiences, I specialize in React and Next.js while exploring backend development to broaden my impact.',
+};
+export const ProjectSectionText = {
+	heading: 'Projects',
+	description:
+		"Here are the projects that I've built.",
+};
+export const SkillsSectionText = {
+	heading: 'Skills',
+	description:
+		"Technologies and tools that I use in building websites.",
+};
+export const AboutSectionText = {
+	heading: 'About',
+	description:
+		"Driven by Passion.",
+};
+export const ContactSectionText = {
+	heading: 'Connect',
+  subheading: 'Get in touch',
+	description: "I’m a Front-end Developer seeking opportunities to contribute to real-world projects and grow my skills. If you’re looking for someone passionate about crafting modern, responsive web applications, feel free to reach out — my inbox is always open.",
 };
 
 export const skills = [
@@ -59,6 +78,11 @@ export const skills = [
 	{
 		name: 'Next',
 		logo: 'nextjs.svg',
+    category: ['frontend', 'backend']
+	},
+	{
+		name: 'Node JS',
+		logo: 'nodejs.svg',
     category: ['frontend', 'backend']
 	},
 	{
@@ -112,8 +136,8 @@ export const projects = [
 	{
 		title: 'Hyrivo',
 		description:
-			'A simple website with Japanese Language Proficiency Test(JLPT) vocabularies from N5 level to N1 level.',
-		techsUsed: ['React', 'Next', 'Tailwind', 'Shadcn-ui', 'Zustand', 'Tanstack-query', 'MongoDB', 'NextAuth', 'Framer Motion'],
+			'Hyrivo is a personal job application tracker that helps you manage applications',
+		techsUsed: ['React', 'Next', 'Tailwind', 'Shadcn-ui', 'Zustand'],
 		image: 'projects/hyrivo.png',
 		liveUrl: 'https://hyrivo.vercel.app/',
 		githubUrl: 'https://github.com/sezaru-dev/hyrivo',
@@ -121,7 +145,25 @@ export const projects = [
 	{
 		title: 'Hyrivo',
 		description:
+			'Hyrivo is a personal job application tracker that helps you manage applications, take notes, and track progress to stay organized in your job hunt.',
+		techsUsed: ['React', 'Next', 'Tailwind', 'Shadcn-ui', 'Zustand', 'Tanstack-query', 'MongoDB', 'NextAuth', 'Framer Motion'],
+		image: 'projects/hyrivo.png',
+		liveUrl: 'https://hyrivo.vercel.app/',
+		githubUrl: 'https://github.com/sezaru-dev/hyrivo',
+	},
+	{
+		title: 'JLPT Tango単語',
+		description:
 			'A simple website with Japanese Language Proficiency Test(JLPT) vocabularies from N5 level to N1 level.',
+		techsUsed: ['React', 'Next', 'Tailwind', 'Shadcn-ui', 'Zustand', 'Tanstack-query', 'MongoDB', 'NextAuth', 'Framer Motion'],
+		image: 'projects/hyrivo.png',
+		liveUrl: 'https://hyrivo.vercel.app/',
+		githubUrl: 'https://github.com/sezaru-dev/hyrivo',
+	},
+	{
+		title: 'Todo App',
+		description:
+			'A Todo App with a dark/light mode theme switcher and local storage. A challenge from the Frontend Mentor website.',
 		techsUsed: ['React', 'Next', 'Tailwind', 'Shadcn-ui', 'Zustand', 'Tanstack-query', 'MongoDB', 'NextAuth', 'Framer Motion'],
 		image: 'projects/hyrivo.png',
 		liveUrl: 'https://hyrivo.vercel.app/',
@@ -129,7 +171,31 @@ export const projects = [
 	},
 ];
 
-export const contact = {
-  heading: 'Get in touch',
-  description: "I’m a Front-end Developer seeking opportunities to contribute to real-world projects and grow my skills. If you’re looking for someone passionate about crafting modern, responsive web applications, feel free to reach out — my inbox is always open.",
-}
+
+export const emailLink =
+  'cezarbaguhin20@gmail.com';
+
+export const FooterMyName = "Cezarlito O. Baguhin"
+
+export const Socials = [
+	{
+		name: 'facebook',
+		logo: <FaFacebookF size={18} />,
+		url: 'https://www.facebook.com/sezaru20',
+	},
+	{
+		name: 'tiktok',
+		logo: <FaTiktok size={18} />,
+		url: 'https://www.tiktok.com/@sezarudev',
+	},
+	{
+		name: 'linkedin',
+		logo: <FaLinkedinIn size={18} />,
+		url: 'https://www.linkedin.com/in/cezarlito-baguhin-184748175',
+	},
+	{
+		name: 'github',
+		logo: <FaGithub size={18} />,
+		url: 'https://github.com/sezaru-dev',
+	},
+];
