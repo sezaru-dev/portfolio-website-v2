@@ -1,4 +1,3 @@
-
 'use client'
 import {useState} from 'react'
 import { motion, useAnimationControls } from 'framer-motion'
@@ -29,6 +28,7 @@ const AnimatedText = ({children}:AnimatedTextProps) => {
       },
 
     })
+
   
   setIsPlaying(true)
 }
@@ -43,11 +43,3 @@ const AnimatedText = ({children}:AnimatedTextProps) => {
 }
 
 export default AnimatedText
-
-/*       color: [
-      "#6B21A8", // start: deep purple
-      "#9333EA", // bounce: vivid violet
-      "#C084FC", // soft lavender flash
-      "#A855F7", // settle purple
-      "#EDEDED", // end: neutral light
-    ], */
