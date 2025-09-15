@@ -1,6 +1,5 @@
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
-import Education from "@/components/sections/Education";
 import Footer from "@/components/sections/Footer";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
@@ -16,7 +15,6 @@ export default function Home() {
         <Skills/>
         <Projects/>
         <About/>
-        <Education/>
         <Contact/>
         <Footer/>
       </main>
