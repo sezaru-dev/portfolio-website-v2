@@ -51,7 +51,7 @@ export default function Contact() {
         className="mt-12 text-center"
       >
         <a
-          href={`https://mail.google.com/mail/u/0/?to=${emailLink}&su=&body=&fs=1&tf=cm`}
+          href={`mailto:${emailLink}`}
           target='_blank'
           rel="noopener noreferrer" 
           className="relative
