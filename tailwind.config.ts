@@ -13,9 +13,6 @@ const config: Config = {
         foreground: "hsl(var(--foreground) / <alpha-value>)",
         blob: "hsl(var(--blob) / <alpha-value>)",
       },
-      fontFamily: {
-        sans: ['Poppins', 'ui-sans-serif', 'system-ui'], 
-      },
     },
   },
   plugins: [],
