@@ -25,7 +25,9 @@ const HomeHandler = (e: React.MouseEvent<HTMLAnchorElement>) => {
       <div  className='relative wrapper py-6  flex items-center justify-between z-40'>
 
         <a href={`/`} className='flex items-center gap-3' onClick={HomeHandler}>
-          <Image src="/cb.svg" alt="/" width={32} height={32} priority className='flex-none invert dark:invert-0'/>
+          <Image src="/cob-white.svg" alt="/" width={28} height={28} priority className='flex-none hidden dark:block'/>
+          <Image src="/cob-blk.svg" alt="/" width={28} height={28} priority className='flex-none block dark:hidden'/>
+          {/* <Image src="/cb.svg" alt="/" width={32} height={32} priority className='flex-none invert dark:invert-0'/> */}
           <h2 className='font-bold text-lg'>Cezar</h2>
         </a>
 
