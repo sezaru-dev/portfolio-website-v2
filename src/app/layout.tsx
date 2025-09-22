@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Transforming ideas into interactive web experiences. Cezarlito is a frontend developer specializing in React, Next.js, and Tailwind CSS, building fast, responsive, and visually engaging applications while exploring backend development for scalable solutions.",
   icons: {
-    icon: "/cb-icon.svg",
+    icon: "/cob-favicon.svg",
   },
   keywords: [
     "Cezarlito O. Baguhin",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Cezarlito O. Baguhin",
     description:
       "Explore Cezar's web development projects, skills, and contact info. Built with Next.js, React, and Tailwind CSS.",
-    url: "https://cezarlitobaguhin.vercel.app", // replace with your actual site URL
+    url: "https://cezarlitobaguhin.vercel.app",
     siteName: "Cezarlito Baguhin Portfolio",
     locale: "en_US",
     type: "website",
